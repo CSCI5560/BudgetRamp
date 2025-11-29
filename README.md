@@ -234,7 +234,7 @@ await supabase.from("mcc").select("mcc, description");
 ### **Clone Repository**
 
 ```bash
-git clone https://github.com/yourusername/BudgetRamp.git
+git clone https://github.com/CSCI5560/BudgetRamp/BudgetRamp.git
 cd BudgetRamp
 ```
 
