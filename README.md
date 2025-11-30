@@ -243,10 +243,6 @@ npm run dev
   App.jsx
   main.jsx
 
-/database
-  schema.sql
-  seed.sql
-
 public
 README.md
 ```
