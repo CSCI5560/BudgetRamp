@@ -59,14 +59,6 @@ Supabase provides:
 * Row-Level Security (disabled for this admin dataset)
 * Edge Functions (optional)
 * SQL Views (full_transactions)
-
-### **Machine Learning Layer**
-
-* Python model trained on financial datasets
-* Model exported as `.pkl`
-* Fraud predictions pushed to Supabase
-* Real-time risk scoring in UI
-
 ---
 
 ## **Database Schema Overview**
@@ -124,7 +116,7 @@ Supabase provides:
 
 ---
 
-## **🔍 SQL View: full_transactions**
+## **SQL View: full_transactions**
 
 Joins:
 
@@ -147,7 +139,7 @@ LEFT JOIN mcc m ON t.mcc = m.mcc;
 
 ---
 
-## **🔌 Supabase Integration**
+## **Supabase Integration**
 
 ### **Fetch Full Transactions**
 
@@ -216,19 +208,6 @@ await supabase.from("mcc").select("mcc, description");
 
 ---
 
-## **ML Fraud Detection Pipeline**
-
-### **Steps**
-
-1. Load cleaned Kaggle credit card dataset
-2. Train classifier (RandomForest / XGBoost)
-3. Export as `model.pkl`
-4. Inference script receives a transaction → returns prediction
-5. Insert into Supabase `fraud` table
-6. Frontend reads prediction in real-time
-
----
-
 ## **Installation & Setup**
 
 ### **Clone Repository**
@@ -267,10 +246,6 @@ npm run dev
 /database
   schema.sql
   seed.sql
-
-/ml
-  model.pkl
-  predict.py
 
 public
 README.md
